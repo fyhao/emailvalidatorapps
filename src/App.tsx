@@ -5,9 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import About from './About';
+import Privacy from './Privacy';
+import Terms from './Terms';
 import Home from './Home';
-import External from './External';
 
 function App() {
   return (
@@ -15,18 +15,18 @@ function App() {
       <div>
         <div className="menu">
           <Link to="/">Home</Link>  
-          <Link to="/about">About</Link> 
-          <Link to="/external">External</Link>
+          <Link to="/privacy">Privacy</Link>
+		  <Link to="/terms">Terms and Conditions</Link>
         </div>
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/privacy">
+            <Privacy />
           </Route>
-          <Route path="/external">
-            <External />
+		  <Route path="/terms">
+            <Terms />
           </Route>
         </Switch>
       </div>
